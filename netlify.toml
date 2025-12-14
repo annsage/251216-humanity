@@ -1,0 +1,12 @@
+[build]
+  command = "npm run build"
+  publish = "dist"
+
+# 다중 페이지 애플리케이션을 위한 리다이렉트 규칙
+# 존재하지 않는 경로는 index.html로 서빙 (SPA처럼 동작)
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
+  force = false
+
